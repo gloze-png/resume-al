@@ -22,7 +22,7 @@ export default function Home() {
  return <main className="bg-[url('/images/bg-main.svg')] bg-cover min-h-screen">
     <Navbar />
   <section className="main-section">
-   <div className="page-heading">
+   <div className="page-heading py-16">
       <h1>Track Your Application and Resume Ratings</h1>
       <h2>Get Notified When Your Resume is Viewed</h2>
     </div>
