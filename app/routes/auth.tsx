@@ -1,12 +1,15 @@
 import { usePuterStore } from "lib/puter"
 
-export const meta = () => {[
+
+export const meta = () => ([
   {title: "Resume1 | Auth"},
   {name: "Al that help you land your dream Job", content: "It helps to get your dream Job!"},
-]}
+])
+
 
 const Auth = () => {
-  const {isLoading, auth } = usePuterStore();
+  const { isLoading, auth } = usePuterStore();
+
   return (
     <main className="bg-[url('/images/bg-auth.svg')] bg-cover min-h-screen flex items-center justify-center">
       <div className="gradient-border shadow-lg">
@@ -22,7 +25,7 @@ const Auth = () => {
               </button>
             ):(
               <>
-              {auth.isAuthenticated ?(
+              {!auth.isAuthenticated ?(
                 <button className="auth-button" onClick={auth.signOut}>
                   <p>Sign Out</p>
                 </button>
